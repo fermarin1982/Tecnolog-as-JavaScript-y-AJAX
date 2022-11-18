@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escribe un programa que pida una frase y escriba cuántas veces aparecen cada una de las vocales</title>
+</head>
+<body>
+    <script>
+
+const contarVocales = palabra => {
+    const vocales = "aáeéiíoóuú";
+    let cantidadVocales = 0;
+    for (const letra of palabra) {
+        if (vocales.includes(letra.toLowerCase())) {
+            cantidadVocales++;
+        }
+    }
+    return cantidadVocales;
+};
+const cadena = "Hola mundo. Estoy estudiando programación en JavaScript desde el blog de Parzibyte";
+const vocales = contarVocales(cadena);
+console.log("La cadena '%s' tiene %d vocales", cadena, vocales);
+    </script>
+</body>
+</html>
